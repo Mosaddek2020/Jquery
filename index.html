@@ -5,51 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery-3.4.1.min.js"> </script>
-    <title>Document</title>
+    <title>Getting Value from a field </title>
 
     <style>
-        .large{
-            font-size: 100px;
-
+        #txtDisplay{
+            border: 2px dashed grey;
+            height: 400px;
+            width: 500px;
+        
+            margin-top: 5px;
         }
-        .small{
-            font-size: 40px;
-        }
-        .medium{
-            font-size: 80px;
-        }
-
-        #green{
-            color: greenyellow;
-        }
-        button{
-             border-radius: 20px;
-             margin: 2px;
-             text-shadow: grey;
-        }
+       #txtbox{
+           height: 20px;
+           width: 250px;
+       } 
+       
     </style>
    
 </head>
 <body>
         <script>
+             var text="";
             $(function () {
-    
-                $("#green").click(function(){
+                $("#submit").click(function(){
+                   //alert('hello');
+                   
+                    
+                    text =text + $("#txtbox").val()+"<br>";
+                    
+                   $("#txtDisplay").html(text);
+                   $("#txtDisplay").css("display","block");
+                   $("#txtbox").val(""); 
 
-                    $("button:not(#green)").hide();
-                    $(this).css("color","red");
-                    $(this).css("font-size","100px");
-
-                });
+                })
+               
                 
             });
          </script>
-        
-        <button class="small" id="green"> small </button>
-        <button class="small"> small </button>
-        <button class="small"> small </button>
-        <button class="medium"> Medium </button>
-        <button class="large">large</button>
+
+        <input type="text" id="txtbox">
+
+        <button id="submit" > submit </button>
+         <div id="txtDisplay">
+
+         </div>
 
         <!-- <script>
             
