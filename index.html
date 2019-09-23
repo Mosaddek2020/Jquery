@@ -8,54 +8,22 @@
     <title>Document</title>
 
     <style>
-        .large{
-            font-size: 100px;
-
-        }
-        .small{
-            font-size: 40px;
-        }
-        .medium{
-            font-size: 80px;
-        }
-
-        #green{
-            color: greenyellow;
-        }
-        button{
-             border-radius: 20px;
-             margin: 2px;
-             text-shadow: grey;
-        }
+       
     </style>
    
 </head>
 <body>
         <script>
+            
             $(function () {
     
-                $("#green").click(function(){
-
-                    $("button:not(#green)").hide();
-                    $(this).css("color","red");
-                    $(this).css("font-size","100px");
-
-                });
+              
                 
             });
          </script>
-        
-        <button class="small" id="green"> small </button>
-        <button class="small"> small </button>
-        <button class="small"> small </button>
-        <button class="medium"> Medium </button>
-        <button class="large">large</button>
+      
 
-        <!-- <script>
-            
-            $(".small").hide();
-        
-        </script> -->
+     
 
 </body>
 </html>
