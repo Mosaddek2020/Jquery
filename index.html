@@ -48,8 +48,8 @@
                 $("#submit").click(function(){
                    //alert('hello');
                    
-                    
-                    text =text + $("#txtbox").val()+"<br>";
+                   if($("#txtbox").val()!='') 
+                     text =text + $("#txtbox").val()+"<br>";
                     
                    $("#txtDisplay").html(text);
                    $("#txtDisplay").css("display","block");
